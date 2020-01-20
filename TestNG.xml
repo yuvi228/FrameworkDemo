@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Smoke Testing" guice-stage="DEVELOPMENT">
+	<test thread-count="5" name="Customer Test" verbose="5">
+		<parameter name="browser" value="Chrome" />
+
+		<classes>
+
+			<class name="testproject.CustomerTest">
+				<methods>
+				<include name="addnewCustomerTest"></include>
+				<include name="searchCustomerTest"></include>
+				<include name="viewCustomerTest"></include>
+				<include name="editCustomerTest"></include>
+				<include name="deleteCustomerTest"></include>
+				</methods>
+
+			</class>
+
+
+
+		</classes>
+	</test> <!-- Default test -->
+
+
+	<test thread-count="5" name="MasterData Test" verbose="5">
+		<parameter name="browser" value="Chrome" />
+		<classes>
+
+			<class name="testproject.MasterDataTest"></class>
+		</classes>
+
+
+
+	</test>
+
+</suite> <!-- Default suite -->
